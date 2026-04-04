@@ -1,0 +1,130 @@
+/* ============================================================
+   STYLE KHUSUS UNTUK CARATLOG - SEVENTEEN BLOG
+   ============================================================ */
+
+/* 1. Pengaturan Dasar & Perhalus Font */
+* {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+    -webkit-font-smoothing: antialiased;
+} 
+
+/* 2. Navigasi Glassmorphism (Efek Tembus Pandang) */
+nav {
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 3. Header Gradient & Animasi Warna */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    background-size: 200% 200% !important;
+    animation: gradientMove 8s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.1;
+}
+
+/* 4. Efek Kartu (Card) Modern */
+section.bg-white, div.bg-white {
+    border-radius: 2rem !important;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+}
+
+section.bg-white:hover, div.bg-white:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(146, 168, 209, 0.25);
+    border-color: #92A8D1;
+}
+
+/* 5. Merapikan Tabel (Tampilan Card List) */
+table {
+    border-collapse: separate !important;
+    border-spacing: 0 8px !important;
+}
+
+thead th {
+    background-color: transparent !important;
+    color: #64748b !important;
+    padding-bottom: 1.5rem !important;
+}
+
+tbody tr {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    border-radius: 1rem;
+}
+
+tbody td {
+    padding: 1.25rem !important;
+    border: none !important;
+}
+
+tbody td:first-child { border-radius: 1rem 0 0 1rem; }
+tbody td:last-child { border-radius: 0 1rem 1rem 0; }
+
+/* 6. Interaksi Video & Konten */
+video {
+    transition: transform 0.6s ease;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
+.group:hover video {
+    transform: scale(1.02);
+}
+
+/* 7. Custom Scrollbar (Warna Rose Quartz) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #F7CAC9;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #92A8D1;
+}
+
+/* 8. Animasi Muncul (Fade In) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main > section, .grid > section {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 9. Styling Khusus Essay Box */
+.bg-slate-50.p-8.rounded-3xl {
+    background: linear-gradient(to bottom right, #ffffff, #f1f5f9) !important;
+    border: 1px dashed #92A8D1;
+}
