@@ -1,9 +1,4 @@
-/* ============================================================
-   STYLE KHUSUS UNTUK CARATLOG - SEVENTEEN BLOG
-   ============================================================ */
-
-/* 1. Pengaturan Dasar & Perhalus Font */
-* {
+{ 
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -13,7 +8,6 @@ body {
     -webkit-font-smoothing: antialiased;
 } 
 
-/* 2. Navigasi Glassmorphism (Efek Tembus Pandang) */
 nav {
     background: rgba(255, 255, 255, 0.75) !important;
     backdrop-filter: blur(12px);
@@ -21,7 +15,6 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* 3. Header Gradient & Animasi Warna */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -43,7 +36,6 @@ header::after {
     opacity: 0.1;
 }
 
-/* 4. Efek Kartu (Card) Modern */
 section.bg-white, div.bg-white {
     border-radius: 2rem !important;
     border: 1px solid rgba(226, 232, 240, 0.8);
@@ -56,7 +48,6 @@ section.bg-white:hover, div.bg-white:hover {
     border-color: #92A8D1;
 }
 
-/* 5. Merapikan Tabel (Tampilan Card List) */
 table {
     border-collapse: separate !important;
     border-spacing: 0 8px !important;
@@ -107,7 +98,6 @@ video {
     background: #92A8D1;
 }
 
-/* 8. Animasi Muncul (Fade In) */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -123,7 +113,6 @@ main > section, .grid > section {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* 9. Styling Khusus Essay Box */
 .bg-slate-50.p-8.rounded-3xl {
     background: linear-gradient(to bottom right, #ffffff, #f1f5f9) !important;
     border: 1px dashed #92A8D1;
